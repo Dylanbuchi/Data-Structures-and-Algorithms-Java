@@ -4,7 +4,7 @@ import java.util.Arrays;
 
 public class InsertionSort {
 
-    // Insertion Sort algorithm is O(n2) quadratic time complexity
+    // Insertion Sort algorithm is O(n^2) quadratic time complexity
     // Stable algorithm
     // in place algorithm
 

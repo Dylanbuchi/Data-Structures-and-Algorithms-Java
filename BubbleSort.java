@@ -4,7 +4,7 @@ import java.util.Arrays;
 
 public class BubbleSort {
 
-    // Bubble sort algorithm is O(n2) quadratic time complexity
+    // Bubble sort algorithm is O(n^2) quadratic time complexity
     // not really good to use in real world but good to learn.
 
     public static void main(String[] args) throws Exception {
