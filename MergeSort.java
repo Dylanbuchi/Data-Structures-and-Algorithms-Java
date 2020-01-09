@@ -15,13 +15,13 @@ public class MergeSort {
 
     public static void main(String[] args) {
 
-        int[] array = { 10, 9, 8, 7, 6, 1, 0 };
-        int[] array2 = { 20, 5, 4, 3, 2, 1, 0, 23 };
+        int[] array = { 10, 9, 7, 6, -8 };
+        int[] array2 = { 5, 4, 3, 2, -1, 0 };
 
         mergeSort(array, 0, array.length);
         display(array);
 
-        mergeSort2(array2, 0, array.length - 1);
+        mergeSort2(array2, 0, array2.length - 1);
         display(array2);
     }
 
@@ -62,13 +62,14 @@ public class MergeSort {
     }
 
     public static void mergeSort2(int[] array, int low, int high) {
-        if (high <= low) {
-            return;
+
+        if (low < high) {
+
+            int mid = (low + high) / 2;
+            mergeSort2(array, low, mid);
+            mergeSort2(array, mid + 1, high);
+            merge2(array, low, mid, high);
         }
-        int mid = (low + high) / 2;
-        mergeSort2(array, low, mid);
-        mergeSort2(array, mid + 1, high);
-        merge2(array, low, mid, high);
 
     }
 
