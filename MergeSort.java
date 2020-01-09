@@ -3,7 +3,7 @@ package app;
 import java.util.Arrays;
 
 /**
- * ShellSort
+ * MergeSort
  */
 public class MergeSort {
 
