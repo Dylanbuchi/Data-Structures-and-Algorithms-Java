@@ -1,16 +1,17 @@
 package app;
 
 import java.util.Arrays;
+import java.util.Base64.Encoder;
 
 /**
  * MergeSort
  */
 public class MergeSort {
 
-    // Merge Sorting algorithm is O(nlogn) base 2 logarithmic time complexity
+    // Merge Sorting algorithm is O(nLogn) base 2 logarithmic time complexity
     // 2 phases Splitting and Merging, and the split is logical
     // Recursive algorithm
-    // Divide & Conquer Algorithm
+    // "Divide & Conquer" Algorithm
     // Stable Algorithm
 
     public static void main(String[] args) {
@@ -22,7 +23,7 @@ public class MergeSort {
 
     private static void mergeSort(int[] array, int start, int end) {
 
-        if (end - start < 2) {
+        if (end - start <= 1) {
             return;
 
         }
