@@ -28,6 +28,7 @@ public class ShellSort {
                     array[j] = array[j - gap];
 
                     j -= gap;
+
                 }
                 array[j] = temp;
 
