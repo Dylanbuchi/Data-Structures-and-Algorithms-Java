@@ -17,17 +17,12 @@ public class ShellSort {
         int[] array = { 5, 6, 7, 1, 3, 2, 4, -9 };
 
         for (int gap = array.length / 2; gap > 0; gap /= 2) {
-            System.out.println("gap index " + gap);
-            System.out.println("the gap is " + array[gap]);
 
             for (int i = gap; i < array.length; i++) {
-                System.out.println("j" + array[i]);
 
                 int temp = array[i];
-                System.out.println("temp " + temp);
 
                 int j = i;
-                System.out.println("i =" + i);
 
                 while (j >= gap && array[j - gap] > temp) {
                     array[j] = array[j - gap];
