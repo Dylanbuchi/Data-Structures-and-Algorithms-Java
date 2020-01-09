@@ -1,7 +1,6 @@
 package app;
 
 import java.util.Arrays;
-import java.util.Base64.Encoder;
 
 /**
  * MergeSort
@@ -17,11 +16,16 @@ public class MergeSort {
     public static void main(String[] args) {
 
         int[] array = { 10, 9, 8, 7, 6, 1, 0 };
+        int[] array2 = { 20, 5, 4, 3, 2, 1, 0, 23 };
+
         mergeSort(array, 0, array.length);
         display(array);
+
+        mergeSort2(array2, 0, array.length - 1);
+        display(array2);
     }
 
-    private static void mergeSort(int[] array, int start, int end) {
+    public static void mergeSort(int[] array, int start, int end) {
 
         if (end - start <= 1) {
             return;
@@ -55,6 +59,59 @@ public class MergeSort {
         System.arraycopy(array, i, array, start + tempIndex, mid - i);
         System.arraycopy(tempArray, 0, array, start, tempIndex);
 
+    }
+
+    public static void mergeSort2(int[] array, int low, int high) {
+        if (high <= low) {
+            return;
+        }
+        int mid = (low + high) / 2;
+        mergeSort2(array, low, mid);
+        mergeSort2(array, mid + 1, high);
+        merge2(array, low, mid, high);
+
+    }
+
+    public static void merge2(int[] array, int low, int mid, int high) {
+
+        int[] temp = new int[high + 1];
+        int i = low;
+        int j = mid + 1;
+        int k = low;
+
+        while (i <= mid && j <= high) {
+            if (array[i] <= array[j]) {
+                temp[k] = array[i];
+                i++;
+
+            } else {
+                temp[k] = array[j];
+                j++;
+
+            }
+            k++;
+        }
+
+        if (i > mid) {
+            while (j <= high) {
+                temp[k] = array[j];
+                j++;
+                k++;
+            }
+        } else {
+
+            while (i <= mid) {
+                temp[k] = array[i];
+                i++;
+                k++;
+
+            }
+
+        }
+        for (int m = low; m <= high; m++) {
+            array[m] = temp[m];
+
+        }
     }
 
     // display array
