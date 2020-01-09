@@ -12,7 +12,6 @@ public class QuickSort {
     // Recursive Algorithm
     // In-place Algorithm
     // Unstable Algorithm
-    // uses pivot to divide the array in 2 parts
 
     public static void main(String[] args) {
 
