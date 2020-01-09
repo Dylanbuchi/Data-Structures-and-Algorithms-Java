@@ -22,8 +22,7 @@ public class QuickSort {
 
     public static void quickSort(int[] array, int left, int right) {
 
-        // if only 1 element or less in the array return
-        if (right - left <= 1) {
+        if (right == left) {
             return;
 
         }
