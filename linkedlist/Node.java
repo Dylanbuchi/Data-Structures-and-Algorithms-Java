@@ -1,35 +1,34 @@
 package app.linkedlist;
 
-/**
- * ok
- */
-public class Node {
+public class Node<T> {
 
-    private Person p;
-    private Node next;
+    private T data;
 
-    public Node(Person p) {
-        this.p = p;
+    private Node<T> next;
+
+    public Node(T data) {
+
+        this.data = data;
     }
 
-    public Person getP() {
-        return p;
+    public T getData() {
+        return data;
     }
 
-    public void setP(Person p) {
-        this.p = p;
+    public void setData(T data) {
+        this.data = data;
     }
 
-    public Node getNext() {
+    public Node<T> getNext() {
         return next;
     }
 
-    public void setNext(Node next) {
+    public void setNext(Node<T> next) {
         this.next = next;
     }
 
     public String toString() {
-        return p.toString();
+        return data.toString();
 
     }
 

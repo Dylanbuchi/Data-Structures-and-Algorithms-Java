@@ -10,7 +10,7 @@ public class Main {
         Person two = new Person("Paul", 45);
         Person p = new Person("Jimmy", 67);
 
-        LinkedList list = new LinkedList();
+        LinkedList<Person> list = new LinkedList<Person>();
 
         System.out.println(list.isEmpty());
 

@@ -3,13 +3,14 @@ package app.linkedlist;
 /**
  * LinkedList
  */
-public class LinkedList {
+public class LinkedList<T> {
 
     // first element field
-    private Node head;
+    private Node<T> head;
+
     private int size;
 
-    public Node removeFromFront() {
+    public Node<T> removeFromFront() {
 
         // if list is empty, then there is nothing to remove
         if (isEmpty()) {
@@ -17,7 +18,7 @@ public class LinkedList {
 
         }
         // store first node to be removed
-        Node removed = head;
+        Node<T> removed = head;
 
         // move the head to be next;
         head = head.getNext();
@@ -33,9 +34,9 @@ public class LinkedList {
 
     }
 
-    public void addToFront(Person person) {
+    public void addToFront(T data) {
         // create the new node with the person we want to add
-        Node node = new Node(person);
+        Node<T> node = new Node<T>(data);
 
         // set the next node to the first element(head)
         node.setNext(head);
@@ -55,7 +56,7 @@ public class LinkedList {
 
     public void printList() {
         // current element t be the first one in the list
-        Node current = head;
+        Node<T> current = head;
 
         System.out.print("head -> ");
 
