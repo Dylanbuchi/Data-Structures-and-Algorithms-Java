@@ -149,9 +149,6 @@ public class DoubleLinkedList<T> {
 
     }
 
-    /**
-     * @return the size
-     */
     public int getSize() {
         return size;
     }

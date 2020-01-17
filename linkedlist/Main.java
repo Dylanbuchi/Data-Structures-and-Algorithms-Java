@@ -35,7 +35,7 @@ public class Main {
 
         listD.addToTail(p2);
         listD.removeFromTail();
-
+        //
         listD.printList();
 
     }
