@@ -12,3 +12,5 @@ Implementation of Data Structures &amp; Algorithms in Java
 - Shell Sort
 - Stack
 - Linked List
+- Queue
+- HashTables

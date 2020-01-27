@@ -6,6 +6,10 @@ import java.util.EmptyStackException;
  * ArrayStack
  */
 public class ArrayStack<E> {
+    // Abstract Data Structure
+    // LIFO last in first out
+    // push pop peek O(1) with LinkedList, O(n) with array
+    // Use array if knowledge of the maximum number of items inside
 
     private E[] stack;
 
